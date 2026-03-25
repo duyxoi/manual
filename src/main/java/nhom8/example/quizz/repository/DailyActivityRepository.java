@@ -1,6 +1,6 @@
 package nhom8.example.quizz.repository;
 
-import nhom8.example.quizz.domain.DailyActivity;
+import nhom8.example.quizz.entity.DailyActivity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.time.LocalDate;

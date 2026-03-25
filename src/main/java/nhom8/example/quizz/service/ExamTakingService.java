@@ -1,10 +1,11 @@
 package nhom8.example.quizz.service;
 
 import jakarta.transaction.Transactional;
-import nhom8.example.quizz.api.dto.ExamDtos;
-import nhom8.example.quizz.api.dto.TakingExamDtos;
-import nhom8.example.quizz.api.exception.ApiException;
-import nhom8.example.quizz.domain.*;
+import nhom8.example.quizz.dto.ExamDtos;
+import nhom8.example.quizz.dto.QuestionDtos;
+import nhom8.example.quizz.dto.TakingExamDtos;
+import nhom8.example.quizz.exception.ApiException;
+import nhom8.example.quizz.entity.*;
 import nhom8.example.quizz.repository.UserRepository;
 import nhom8.example.quizz.repository.AnswerRepository;
 import nhom8.example.quizz.repository.ExamRepository;
@@ -31,6 +32,7 @@ public class ExamTakingService {
     private final AnswerRepository answerRepository;
     private final AuthContextService authContextService;
     private final ExamService examService;
+    private final QuestionService questionService;
 
     public ExamTakingService(UserRepository userRepository,
                              ExamRepository examRepository,
@@ -38,7 +40,8 @@ public class ExamTakingService {
                              ResultRepository resultRepository,
                              AnswerRepository answerRepository,
                              AuthContextService authContextService,
-                             ExamService examService) {
+                             ExamService examService,
+                             QuestionService questionService) {
         this.userRepository = userRepository;
         this.examRepository = examRepository;
         this.questionRepository = questionRepository;
@@ -46,6 +49,7 @@ public class ExamTakingService {
         this.answerRepository = answerRepository;
         this.authContextService = authContextService;
         this.examService = examService;
+        this.questionService = questionService;
     }
 
     @Transactional
@@ -55,7 +59,7 @@ public class ExamTakingService {
                 .orElseThrow(() -> new ApiException(HttpStatus.NOT_FOUND, "NOT_FOUND", "Không tìm thấy đề thi", null));
         AppUser user = userRepository.findById(ctx.userId())
                 .orElseThrow(() -> new ApiException(HttpStatus.NOT_FOUND, "NOT_FOUND", "Không tìm thấy user", null));
-
+        List<QuestionDtos.QuestionDto> listQuestion = questionService.findByExam(examId);
         LocalDateTime now = LocalDateTime.now();
 
         Result result = new Result();
@@ -74,7 +78,7 @@ public class ExamTakingService {
         Result saved = resultRepository.save(result);
 
         long timeRemaining = exam.getDurationMinutes().longValue() * 60L;
-        return new TakingExamDtos.ExamSessionDto(String.valueOf(saved.getId()), examService.getExamDto(examId), now, timeRemaining);
+        return new TakingExamDtos.ExamSessionDto(String.valueOf(saved.getId()), examService.getExamDto(examId), now, timeRemaining,listQuestion);
     }
 
     @Transactional

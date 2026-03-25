@@ -1,6 +1,6 @@
 package nhom8.example.quizz.repository;
 
-import nhom8.example.quizz.domain.Question;
+import nhom8.example.quizz.entity.Question;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

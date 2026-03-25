@@ -1,6 +1,6 @@
 package nhom8.example.quizz.repository;
 
-import nhom8.example.quizz.domain.Result;
+import nhom8.example.quizz.entity.Result;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

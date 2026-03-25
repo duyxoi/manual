@@ -1,10 +1,8 @@
 package nhom8.example.quizz.service;
 
 import jakarta.transaction.Transactional;
-import nhom8.example.quizz.api.exception.ApiException;
-import nhom8.example.quizz.api.response.PaginationDto;
-import nhom8.example.quizz.api.dto.ResultDtos;
-import nhom8.example.quizz.domain.*;
+import nhom8.example.quizz.exception.ApiException;
+import nhom8.example.quizz.entity.*;
 import nhom8.example.quizz.repository.*;
 import nhom8.example.quizz.security.AuthContextService;
 import nhom8.example.quizz.security.AuthUserContext;
@@ -14,7 +12,6 @@ import org.springframework.stereotype.Service;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.*;
 
 @Service

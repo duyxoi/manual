@@ -1,7 +1,7 @@
 package nhom8.example.quizz.security;
 
 import jakarta.servlet.http.HttpServletRequest;
-import nhom8.example.quizz.api.exception.ApiException;
+import nhom8.example.quizz.exception.ApiException;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 

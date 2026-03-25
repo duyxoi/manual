@@ -1,12 +1,12 @@
 package nhom8.example.quizz.service;
 
 import jakarta.transaction.Transactional;
-import nhom8.example.quizz.api.dto.AuthDtos;
-import nhom8.example.quizz.api.dto.AdminDtos;
-import nhom8.example.quizz.api.exception.ApiException;
-import nhom8.example.quizz.domain.AppUser;
-import nhom8.example.quizz.domain.UserStatistics;
-import nhom8.example.quizz.domain.SubjectStatistics;
+import nhom8.example.quizz.dto.AuthDtos;
+import nhom8.example.quizz.dto.AdminDtos;
+import nhom8.example.quizz.exception.ApiException;
+import nhom8.example.quizz.entity.AppUser;
+import nhom8.example.quizz.entity.UserStatistics;
+import nhom8.example.quizz.entity.SubjectStatistics;
 import nhom8.example.quizz.repository.*;
 import nhom8.example.quizz.security.AuthContextService;
 import org.springframework.data.domain.Page;

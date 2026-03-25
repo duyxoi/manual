@@ -1,10 +1,10 @@
 package nhom8.example.quizz.service;
 
 import jakarta.transaction.Transactional;
-import nhom8.example.quizz.api.dto.AuthDtos;
-import nhom8.example.quizz.api.dto.UserDtos;
-import nhom8.example.quizz.api.exception.ApiException;
-import nhom8.example.quizz.domain.AppUser;
+import nhom8.example.quizz.dto.AuthDtos;
+import nhom8.example.quizz.dto.UserDtos;
+import nhom8.example.quizz.exception.ApiException;
+import nhom8.example.quizz.entity.AppUser;
 import nhom8.example.quizz.repository.UserRepository;
 import nhom8.example.quizz.security.AuthContextService;
 import nhom8.example.quizz.security.AuthUserContext;
@@ -17,10 +17,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.time.LocalDateTime;
 import java.util.Locale;
 import java.util.UUID;
-import java.util.Optional;
 
 @Service
 public class UserService {

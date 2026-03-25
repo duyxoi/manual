@@ -1,9 +1,8 @@
 package nhom8.example.quizz.service;
 
-import nhom8.example.quizz.api.dto.AuthDtos;
-import nhom8.example.quizz.api.dto.ExamDtos;
-import nhom8.example.quizz.api.exception.ApiException;
-import nhom8.example.quizz.domain.*;
+import nhom8.example.quizz.dto.ExamDtos;
+import nhom8.example.quizz.exception.ApiException;
+import nhom8.example.quizz.entity.*;
 import nhom8.example.quizz.repository.ExamRepository;
 import nhom8.example.quizz.repository.QuestionRepository;
 import nhom8.example.quizz.security.AuthContextService;
