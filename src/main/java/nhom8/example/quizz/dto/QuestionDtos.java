@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class QuestionDtos {
 
     public record QuestionDto(
+            Integer QuestionId,
             String questionText,
             @JsonProperty("option_a") String optionA,
             @JsonProperty("option_b") String optionB,

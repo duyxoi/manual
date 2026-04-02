@@ -1,8 +1,8 @@
 package nhom8.example.quizz.controller;
 
 import nhom8.example.quizz.dto.ExamDtos;
-import nhom8.example.quizz.api.response.ApiResponse;
-import nhom8.example.quizz.api.response.PaginationDto;
+import nhom8.example.quizz.response.ApiResponse;
+import nhom8.example.quizz.response.PaginationDto;
 import nhom8.example.quizz.entity.Exam;
 import nhom8.example.quizz.service.ExamService;
 import org.springframework.data.domain.Page;

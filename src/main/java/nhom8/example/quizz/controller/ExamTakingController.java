@@ -1,7 +1,7 @@
 package nhom8.example.quizz.controller;
 
 import nhom8.example.quizz.dto.TakingExamDtos;
-import nhom8.example.quizz.api.response.ApiResponse;
+import nhom8.example.quizz.response.ApiResponse;
 import nhom8.example.quizz.service.ExamTakingService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

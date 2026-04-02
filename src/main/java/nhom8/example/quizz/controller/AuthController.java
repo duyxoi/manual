@@ -1,7 +1,7 @@
 package nhom8.example.quizz.controller;
 
 import nhom8.example.quizz.dto.AuthDtos;
-import nhom8.example.quizz.api.response.ApiResponse;
+import nhom8.example.quizz.response.ApiResponse;
 import nhom8.example.quizz.security.AuthContextService;
 import nhom8.example.quizz.service.AuthService;
 import org.springframework.http.ResponseEntity;

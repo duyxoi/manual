@@ -25,6 +25,7 @@ public class QuestionService {
 
             // Trích xuất dữ liệu an toàn, kiểm tra size để tránh lỗi IndexOutOfBounds
             return new QuestionDtos.QuestionDto(
+                    question.getId(),
                     question.getQuestionText(),
                     size > 0 ? options.get(0).getOptionText() : null,
                     size > 1 ? options.get(1).getOptionText() : null,

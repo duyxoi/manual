@@ -1,6 +1,6 @@
 package nhom8.example.quizz.controller;
 
-import nhom8.example.quizz.api.response.ApiResponse;
+import nhom8.example.quizz.response.ApiResponse;
 import nhom8.example.quizz.exception.ApiException;
 import nhom8.example.quizz.security.AuthContextService;
 import org.springframework.http.ResponseEntity;

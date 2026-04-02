@@ -1,6 +1,6 @@
 package nhom8.example.quizz.exception;
 
-import nhom8.example.quizz.api.response.ApiResponse;
+import nhom8.example.quizz.response.ApiResponse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
